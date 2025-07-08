@@ -1,0 +1,27 @@
+.internship {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 80px 1.5rem 40px 1.5rem;
+  text-align: center;
+}
+
+.internship__content {
+  background: var(--color-nav);
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 8px rgba(10,25,47,0.08);
+}
+
+.internship__content h3 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.internship__content p {
+  color: var(--color-text);
+  font-size: 1.05rem;
+  margin: 0;
+} 

@@ -1,0 +1,20 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 1.5rem 40px 1.5rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about__text {
+  font-size: 1.15rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0 auto;
+} 
