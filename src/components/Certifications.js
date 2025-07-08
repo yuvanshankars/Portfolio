@@ -20,4 +20,4 @@ function Certifications() {
   );
 }
 
-export defaul
+export default Certifications; 
