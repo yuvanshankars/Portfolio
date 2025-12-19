@@ -277,8 +277,61 @@
 
 /* Responsive */
 @media (max-width: 600px) {
+  .hero {
+    padding-inline: 1rem;
+  }
+
+  .hero__content {
+    flex-direction: column;
+    /* Stack image on top is standard, or keep column if image is first in HTML? HTML: img first. So column is fine. But wait, typically img is top on mobile. Original CSS had column. */
+    gap: 2rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Note: content direction: existing HTML puts Image first, then Info. 
+     If we want Info top, use column-reverse. But usually Image top is fine or personal preference. 
+     Let's stick to existing: flex-direction: column means Image (top) -> Info (bottom).
+  */
+
+  .hero__img-wrapper {
+    flex: 0 0 auto;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .hero__img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero__info {
+    padding-right: 0;
+    align-items: center;
+    /* Center text content */
+  }
+
   .hero__actions {
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* Stack buttons */
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .hero__resume,
+  .hero__resume-view {
+    width: 100%;
+    max-width: 280px;
+    /* Limit width */
+    text-align: center;
     justify-content: center;
+  }
+
+  .hero__socials {
+    margin-top: 1rem;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
   }
 }

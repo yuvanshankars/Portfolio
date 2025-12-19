@@ -10,7 +10,7 @@
   justify-content: space-between;
   padding: 0 2rem;
   height: 64px;
-  box-shadow: 0 2px 8px rgba(10,25,47,0.1);
+  box-shadow: 0 2px 8px rgba(10, 25, 47, 0.1);
 }
 
 .navbar__logo {
@@ -84,22 +84,28 @@
     position: absolute;
     top: 64px;
     right: 0;
-    background: var(--color-nav);
+    background: rgba(22, 33, 62, 0.98);
+    /* High contrast background */
     flex-direction: column;
-    width: 200px;
-    align-items: flex-start;
-    padding: 1rem 0.5rem;
-    gap: 1rem;
-    box-shadow: 0 2px 8px rgba(10,25,47,0.1);
+    width: 100%;
+    /* Full width */
+    align-items: center;
+    /* Center items */
+    padding: 2rem 0;
+    /* More padding */
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
     transform: translateX(100%);
-    transition: transform 0.3s;
-    opacity: 0.98;
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
     z-index: 99;
   }
+
   .navbar__links.open {
     transform: translateX(0);
   }
+
   .navbar__toggle {
     display: flex;
   }
-} 
+}
