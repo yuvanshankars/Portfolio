@@ -5,18 +5,14 @@ const education = [
   {
     degree: 'B.E. Computer Science and Engineering',
     institution: 'Kongu Engineering College',
-    score: 'CGPA: 7.1',
+    score: 'CGPA: 7.15',
   },
   {
     degree: 'HSC',
     institution: 'State Board',
     score: '79.0%',
   },
-  {
-    degree: 'SSLC',
-    institution: 'State Board',
-    score: 'ALL PASS',
-  },
+  
 ];
 
 function Education() {

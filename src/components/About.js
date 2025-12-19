@@ -6,7 +6,7 @@ function About() {
     <section className="about" id="about" data-aos="fade-up">
       <h2 className="section-title">About Me</h2>
       <p className="about__text">
-        I am Yuvanshankar S, an aspiring full stack developer and a Computer Science Engineering student at Kongu Engineering College. Passionate about building scalable web applications and learning new technologies, I enjoy solving real-world problems and collaborating with others. My interests include web development, AI, and open-source contributions.
+        “As a Computer Science Engineering student, I'm focused on MERN-stack development. I've gained hands-on experience in project involving real-time web applications. Now that I've officially started my MERN-stack development journey, I'm eager to apply my technical skills to build innovative and impactful solutions.”
       </p>
     </section>
   );

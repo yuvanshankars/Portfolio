@@ -13,8 +13,22 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    // Optionally, integrate with email service or backend
+    // submit to backend API (public endpoint)
+    fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    }).then(async (res) => {
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const json = await res.json().catch(() => ({}));
+        alert('Failed to send message: ' + (json.error || res.statusText));
+      }
+    }).catch((err) => {
+      console.error(err);
+      alert('Network error while sending message');
+    });
   };
 
   return (

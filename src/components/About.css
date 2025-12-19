@@ -1,8 +1,8 @@
 .about {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 80px 1.5rem 40px 1.5rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 48px 2rem; /* full-width sections with consistent padding */
+  text-align: left;
 }
 
 .section-title {
@@ -10,11 +10,31 @@
   color: var(--color-primary);
   margin-bottom: 1.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .about__text {
-  font-size: 1.15rem;
+  font-size: 1.06rem;
   color: var(--color-text);
-  line-height: 1.7;
+  line-height: 1.8;
   margin: 0 auto;
-} 
+  max-width: 1000px; /* constrained paragraph width but aligned to left edge */
+  text-align: center; /* center the about copy for a balanced layout */
+  letter-spacing: 0.1px;
+}
+
+@media (max-width: 700px) {
+  .about__text {
+    text-align: center; /* center content on small screens */
+    font-size: 1.02rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .about__text {
+    text-align: center; /* ensure mobile centers */
+    font-size: 1.02rem;
+    max-width: 100%;
+  }
+}

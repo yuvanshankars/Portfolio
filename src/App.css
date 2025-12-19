@@ -1,7 +1,8 @@
 main {
-  padding-top: 64px;
+  padding-top: 64px; /* reserve space for fixed navbar */
 }
 
 section {
-  scroll-margin-top: 80px;
-} 
+  padding: 48px 1.5rem; /* consistent section spacing */
+  scroll-margin-top: calc(64px + 16px);
+}
