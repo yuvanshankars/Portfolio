@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import './Projects.css';
 
 const projects = [
@@ -23,6 +26,13 @@ const projects = [
     link: 'https://github.com/your-github/ecommerce-api',
     demo: '',
   },
+  {
+    title: 'Expenses Tracker',
+    description: 'A web app that allows users to track their expenses and view their spending habits.',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB'],
+    link: 'https://github.com/yuvanshankars/Financial-Compass',
+    demo: '',
+  },
 ];
 
 function Projects() {
@@ -40,8 +50,14 @@ function Projects() {
               ))}
             </div>
             <div className="project__links">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">GitHub</a>
-              {project.demo && <a href={project.demo} target="_blank" rel="noopener noreferrer">Demo</a>}
+              <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              {project.demo && (
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" aria-label="Demo">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </a>
+              )}
             </div>
           </div>
         ))}
