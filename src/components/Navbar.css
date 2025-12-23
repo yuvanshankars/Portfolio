@@ -3,109 +3,152 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
-  background: var(--color-nav);
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.7);
+  /* See-through dark blue */
+  backdrop-filter: blur(12px);
+  /* Frosted Glass */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
-  height: 64px;
-  box-shadow: 0 2px 8px rgba(10, 25, 47, 0.1);
+  padding: 0 3rem;
+  height: 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
 }
 
 .navbar__logo {
-  color: var(--color-primary);
+  color: var(--color-white);
   font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
+  font-size: 1.4rem;
+  font-family: var(--font-main);
+  /* Back to Poppins */
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #fff, var(--color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar__center {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.navbar__links li {
+  position: relative;
 }
 
 .navbar__links li button {
   background: none;
   border: none;
   color: var(--color-text);
-  font-size: 1rem;
-  font-family: inherit;
+  font-size: 0.95rem;
+  font-family: var(--font-main);
+  font-weight: 600;
   cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  position: relative;
+  opacity: 0.8;
 }
 
-.navbar__links li button.active,
-.navbar__links li button:hover {
-  background: var(--color-hover);
-  color: var(--color-primary);
+.navbar__links li button:hover,
+.navbar__links li button.active {
+  color: var(--color-white);
+  opacity: 1;
+}
+
+/* The Sliding Line Indicator */
+.nav-line {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  background: var(--color-primary);
+  /* Pitch Green */
+  border-radius: 2px;
+  width: 0;
+  /* Animated by JS */
+  box-shadow: 0 0 10px rgba(107, 203, 119, 0.6);
+  pointer-events: none;
 }
 
 .navbar__socials {
   display: flex;
-  gap: 0.75rem;
-  margin-left: 1rem;
+  gap: 1.2rem;
 }
 
 .navbar__socials a {
   color: var(--color-text);
   font-size: 1.2rem;
-  transition: color 0.2s;
+  transition: all 0.3s;
 }
 
 .navbar__socials a:hover {
   color: var(--color-primary);
+  transform: translateY(-2px);
 }
 
 .navbar__toggle {
   display: none;
-  flex-direction: column;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
   cursor: pointer;
-  gap: 4px;
-  margin-left: 1rem;
-}
-
-.navbar__toggle span {
-  width: 28px;
-  height: 3px;
-  background: var(--color-text);
-  border-radius: 2px;
-  transition: all 0.3s;
 }
 
 @media (max-width: 900px) {
+  .nav-line {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 1.5rem;
+    background: rgba(15, 23, 42, 0.95);
+    /* More solid on mobile */
+  }
+
   .navbar__links {
     position: absolute;
-    top: 64px;
+    top: 70px;
     right: 0;
-    background: rgba(22, 33, 62, 0.98);
-    /* High contrast background */
+    background: rgba(15, 23, 42, 0.98);
     flex-direction: column;
     width: 100%;
-    /* Full width */
     align-items: center;
-    /* Center items */
     padding: 2rem 0;
-    /* More padding */
-    gap: 1.5rem;
-    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    opacity: 1;
+    gap: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 99;
   }
 
   .navbar__links.open {
-    transform: translateX(0);
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 
   .navbar__toggle {
-    display: flex;
+    display: block;
+    margin-left: 1rem;
   }
 }

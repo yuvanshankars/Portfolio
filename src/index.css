@@ -1,13 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&family=Russo+One&family=Allura&display=swap');
 
 :root {
-  --color-bg: #1a1a2e;
-  --color-primary: #4ecca3;
-  --color-white: #fff;
-  --color-text: #e6e6e6;
-  --color-nav: #16213e;
-  --color-hover: #0f3460;
+  --color-bg: #0f172a;
+  /* Midnight Stadium Blue */
+  --color-primary: #6BCB77;
+  /* Pitch Green */
+  --color-accent: #FF4C4C;
+  /* Cricket Ball Red */
+  --color-white: #f8fafc;
+  --color-text: #e2e8f0;
+  --color-nav: #1e293b;
+  --color-hover: #334155;
   --font-main: 'Poppins', sans-serif;
+}
+
+/* Global Section Title Centering */
+.section-title {
+  text-align: center;
+  width: 100%;
 }
 
 html {
@@ -41,7 +51,8 @@ a:hover {
   width: 8px;
   background: var(--color-nav);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--color-primary);
   border-radius: 4px;
-} 
+}

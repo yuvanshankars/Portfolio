@@ -3,6 +3,15 @@
   margin: 0 auto;
   padding: 80px 1.5rem 40px 1.5rem;
   text-align: center;
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.certifications .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 .certifications__list {

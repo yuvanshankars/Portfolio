@@ -24,7 +24,7 @@ function Certifications() {
 
   return (
     <section className="certifications" id="certifications" data-aos="fade-up">
-      <h2 className="section-title">Certifications</h2>
+      <h2 className="section-title"> <span className="title-highlight">Certifications</span></h2>
       <ul className="certifications__list">
         {certifications.map((cert, index) => (
           <li key={cert.name} className="cert-item" style={{ animationDelay: `${index * 0.15}s` }}>
