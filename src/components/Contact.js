@@ -121,7 +121,7 @@ function Contact() {
           </div>
 
           <div className="contact__info">
-            <p>Email: <a href="mailto:yuvanshankar@email.com">yuvansekar10@email.com</a></p>
+            <p>Email: <a href="mailto:yuvanshankar@gmail.com">yuvansekar10@gmail.com</a></p>
             <div className="contact__socials">
               <a href="https://github.com/yuvanshankars" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faGithub} />

@@ -5,13 +5,13 @@ const education = [
   {
     degree: 'B.E. Computer Science and Engineering',
     institution: 'Kongu Engineering College',
-    score: 'CGPA: 7.15',
+    CGPA: '7.15',
     innings: '2nd Innings (2023 - Present)'
   },
   {
     degree: 'HSC',
     institution: 'State Board',
-    score: '79.0%',
+    CGPA: '79.0%',
     innings: '1st Innings (2022 - 2023)'
   },
 
@@ -30,7 +30,7 @@ function Education() {
               <h3>{item.degree}</h3>
               <p>{item.institution}</p>
               <div className="score-badge">
-                <span>Runs: {item.score}</span>
+                <span>{item.CGPA}</span>
               </div>
             </div>
           </div>
